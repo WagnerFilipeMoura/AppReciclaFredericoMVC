@@ -1,0 +1,87 @@
+{% include 'partials/nav.njk' %}
+
+<center>
+<div class="card">
+  <div class="card-header">
+    <h4>Cadastro de Bairros</h4>
+  </div>
+  <div class="card-body">
+  <form method="POST" action="/app/bairro/store">
+    <div class="form-group">
+      <label>Nome Bairro</label>
+      <input type="text" class="form-control" name="bairro" placeholder="Nome Bairro" required autofocus>
+    </div>
+
+    <div class="form-group">
+      <label>Dias Coleta Resíduos Secos</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="secos" value="Segunda">
+      <label class="form-check-label" for="inlineCheckbox1">Segunda</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="secos" value="Terça">
+      <label class="form-check-label" for="inlineCheckbox2">Terça</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="secos" value="Quarta">
+      <label class="form-check-label" for="inlineCheckbox3">Quarta</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="secos" value="Quinta">
+      <label class="form-check-label" for="inlineCheckbox4">Quinta</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="secos" value="Sexta">
+      <label class="form-check-label" for="inlineCheckbox5">Sexta</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="secos" value="Sábado">
+      <label class="form-check-label" for="inlineCheckbox6">Sábado</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="secos" value="Domingo">
+      <label class="form-check-label" for="inlineCheckbox7">Domingo</label>
+    </div>
+
+    <div class="form-group"></div>
+    <div class="form-group">
+      <label>Dias Coleta Resíduos Orgânicos</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="organicos" value="Segunda">
+      <label class="form-check-label" for="inlineCheckbox8">Segunda</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="organicos" value="Terça">
+      <label class="form-check-label" for="inlineCheckbox9">Terça</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="organicos" value="Quarta">
+      <label class="form-check-label" for="inlineCheckbox10">Quarta</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="organicos" value="Quinta">
+      <label class="form-check-label" for="inlineCheckbox11">Quinta</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="organicos" value="Sexta">
+      <label class="form-check-label" for="inlineCheckbox12">Sexta</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="organicos" value="Sábado">
+      <label class="form-check-label" for="inlineCheckbox13">Sábado</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="organicos" value="Domingo">
+      <label class="form-check-label" for="inlineCheckbox14">Domingo</label>
+    </div>
+
+    <div class="form-group"></div>
+    <div class="form-group"></div>
+
+    <button type="submit" class="btn btn-lg corpadrao textobranco btn-block">Cadastrar</button>
+  </form>
+  </div>
+</div>
+</center>

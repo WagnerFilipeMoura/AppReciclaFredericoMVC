@@ -1,0 +1,40 @@
+{% include 'partials/nav.njk' %}
+
+<center>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Bairro</th>
+      <th scope="col">Coleta Resíduos Secos</th>
+      <th scope="col">Coleta Resíduos Orgânicos</th>
+      <th scope="col" class="text-center">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for bairro in bairros %}
+    <tr>
+      <td>{{bairro.bairro}}</td>
+      <td>{{ bairro.diasColetaSecos }}</td>
+      <td>{{ bairro.diasColetaOrganicos }}</td>
+      <td class="text-center">
+        <form action="/app/bairro/{{ bairro._id }}?_method=DELETE" method="POST">
+          <button onclick="excluir_registro( event );" type="submit" class="btn btn-danger btn-sm">x</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+
+<script type="text/javascript">
+function excluir_registro( e ){
+	if( !confirm('Confirma a exclusão?') )
+	{
+		if( window.event)
+			window.event.returnValue=false;
+		else
+			e.preventDefault();
+	}
+}
+</script>

@@ -1,0 +1,21 @@
+{% include 'partials/nav.njk' %}
+
+<center>
+{# <div class="centered" > #}
+<div class="card">
+  <div class="card-header">
+    <h4>Enviar PushNotification</h4>
+  </div>
+  <div class="card-body">
+  <form method="POST" action="/app/onesignal/send">
+    <div class="form-group">
+      <label>Mensagem</label>
+      <input type="text" class="form-control" name="mensagem" placeholder="Mensagem" required autofocus>
+    </div>
+
+    <button type="submit" class="btn btn-lg corpadrao textobranco btn-block">Enviar Mensagem</button>
+  </form>
+  </div>
+</div>
+{# </div> #}
+</center>

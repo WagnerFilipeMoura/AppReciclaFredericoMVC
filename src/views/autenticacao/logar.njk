@@ -1,0 +1,19 @@
+{% extends 'layouts/default.njk' %}
+
+{% block body %}
+{# <center> #}
+<div class="divlogin">
+<form method="POST" action="/autenticacao" class="form-signin">
+    <!-- <img class="mb-4" src="/docs/4.2/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+  <h1 class="h3 mb-3 font-weight-normal">Gerenciador Recicla Frederico</h1>
+  {# <label for="inputEmail" class="sr-only">E-mail</label> #}
+  <input type="text" name="nomelogin" class="form-control" placeholder="UserName" required autofocus>
+  {# <label for="inputPassword" class="sr-only">Senha</label> #}
+  <input type="password" name="password" class="form-control" placeholder="Senha" required>
+
+  <button class="btn btn-lg corpadrao textobranco btn-block" type="submit">Entrar</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+</form>
+</div>
+{# </center> #}
+{% endblock %}

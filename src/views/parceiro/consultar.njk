@@ -1,0 +1,38 @@
+{% include 'partials/nav.njk' %}
+
+<center>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Link</th>
+      <th scope="col" class="text-center">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for parceiro in parceiros %}
+    <tr>
+      <td>{{parceiro.nome}}</td>
+      <td>{{ parceiro.linkparceiro }}</td>
+      <td class="text-center">
+        <form action="/app/parceiro/{{ parceiro._id }}?_method=DELETE" method="POST">
+          <button onclick="excluir_registro( event );" type="submit" class="btn btn-danger btn-sm">x</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+
+<script type="text/javascript">
+function excluir_registro( e ){
+	if( !confirm('Confirma a exclusão?') )
+	{
+		if( window.event)
+			window.event.returnValue=false;
+		else
+			e.preventDefault();
+	}
+}
+</script>
